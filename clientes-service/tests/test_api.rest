@@ -1,0 +1,68 @@
+### Health Check
+GET http://localhost:3003/health
+
+### Registrar Cliente 1
+POST http://localhost:3003/api/clientes/registrar
+Content-Type: application/json
+
+{
+    "nombre": "Carlos Rodriguez",
+    "email": "carlos@email.com",
+    "telefono": "2222-3333",
+    "direccion": "Curridabat, San Jose"
+}
+
+### Registrar Cliente 2
+POST http://localhost:3003/api/clientes/registrar
+Content-Type: application/json
+
+{
+    "nombre": "Ana Martinez",
+    "email": "ana@email.com",
+    "telefono": "4444-5555",
+    "direccion": "Escazu, San Jose"
+}
+
+### Registrar Cliente 3
+POST http://localhost:3003/api/clientes/registrar
+Content-Type: application/json
+
+{
+    "nombre": "Luis Perez",
+    "email": "luis@email.com",
+    "telefono": "6666-7777",
+    "direccion": "Santa Ana, San Jose"
+}
+
+### Registrar Cliente con email duplicado (debe dar error)
+POST http://localhost:3003/api/clientes/registrar
+Content-Type: application/json
+
+{
+    "nombre": "Carlos Duplicado",
+    "email": "carlos@email.com",
+    "telefono": "8888-9999",
+    "direccion": "San Pedro, San Jose"
+}
+
+### Listar todos los clientes
+GET http://localhost:3003/api/clientes/listar
+
+### Listar clientes con paginacion
+GET http://localhost:3003/api/clientes/listar?limite=2&offset=0
+
+### Obtener cliente por ID (reemplazar {id} con un ID real)
+GET http://localhost:3003/api/clientes/65f2a1b3c4d5e6f7g8h9i0j1
+
+### Actualizar cliente (reemplazar {id} con un ID real)
+PUT http://localhost:3003/api/clientes/65f2a1b3c4d5e6f7g8h9i0j1
+Content-Type: application/json
+
+{
+    "nombre": "Carlos Rodriguez Actualizado",
+    "telefono": "9999-8888",
+    "direccion": "Nueva direccion, San Jose"
+}
+
+### Eliminar cliente (reemplazar {id} con un ID real)
+DELETE http://localhost:3003/api/clientes/65f2a1b3c4d5e6f7g8h9i0j1

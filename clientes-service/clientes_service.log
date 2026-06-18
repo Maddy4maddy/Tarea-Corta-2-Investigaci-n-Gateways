@@ -1,0 +1,133 @@
+2026-06-18 09:36:21,295 - __main__ - INFO - ==================================================
+2026-06-18 09:36:21,295 - __main__ - INFO - Servicio Clientes iniciando...
+2026-06-18 09:36:21,295 - __main__ - INFO - Puerto: 3003
+2026-06-18 09:36:21,295 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-18 09:36:21,295 - __main__ - INFO - Base de datos: clientes_db
+2026-06-18 09:36:21,296 - __main__ - INFO - Debug mode: True
+2026-06-18 09:36:21,296 - __main__ - INFO - ==================================================
+2026-06-18 09:36:21,394 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3003
+ * Running on http://192.168.1.11:3003
+2026-06-18 09:36:21,395 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-18 09:36:21,396 - werkzeug - INFO -  * Restarting with stat
+2026-06-18 09:36:22,180 - __main__ - INFO - ==================================================
+2026-06-18 09:36:22,180 - __main__ - INFO - Servicio Clientes iniciando...
+2026-06-18 09:36:22,181 - __main__ - INFO - Puerto: 3003
+2026-06-18 09:36:22,181 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-18 09:36:22,181 - __main__ - INFO - Base de datos: clientes_db
+2026-06-18 09:36:22,181 - __main__ - INFO - Debug mode: True
+2026-06-18 09:36:22,181 - __main__ - INFO - ==================================================
+2026-06-18 09:36:22,207 - werkzeug - WARNING -  * Debugger is active!
+2026-06-18 09:36:22,210 - werkzeug - INFO -  * Debugger PIN: 724-858-377
+2026-06-18 09:36:34,685 - app - INFO - [Clientes Service] GET /clientes
+2026-06-18 09:36:34,686 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 09:36:34] "[33mGET /clientes HTTP/1.1[0m" 404 -
+2026-06-18 09:36:44,027 - app - INFO - [Clientes Service] GET /health
+2026-06-18 09:36:44,028 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 09:36:44] "GET /health HTTP/1.1" 200 -
+2026-06-18 09:37:01,580 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-18 09:37:01,580 - app - INFO - Body: {'nombre': 'Carlos Rodriguez', 'email': 'carlos@email.com', 'telefono': '2222-3333', 'direccion': 'Curridabat, San Jose'}
+2026-06-18 09:37:01,742 - app.models.cliente - INFO - Cliente creado con ID: cbf2ba64-93ce-41ec-97f2-82bdae68e4d5
+2026-06-18 09:37:01,744 - app.controllers.cliente_controller - INFO - Cliente registrado: carlos@email.com (ID: cbf2ba64-93ce-41ec-97f2-82bdae68e4d5)
+2026-06-18 09:37:01,745 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 09:37:01] "[35m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 201 -
+2026-06-18 09:39:43,200 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-18 09:39:43,200 - app - INFO - Body: {'nombre': 'Ana Martinez', 'email': 'ana@email.com', 'telefono': '4444-5555', 'direccion': 'Escazu, San Jose'}
+2026-06-18 09:39:43,209 - app.models.cliente - INFO - Cliente creado con ID: c5589862-0513-4cc6-8db3-8863eb2a467d
+2026-06-18 09:39:43,209 - app.controllers.cliente_controller - INFO - Cliente registrado: ana@email.com (ID: c5589862-0513-4cc6-8db3-8863eb2a467d)
+2026-06-18 09:39:43,210 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 09:39:43] "[35m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 201 -
+2026-06-18 09:39:47,799 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-18 09:39:47,800 - app - INFO - Body: {'nombre': 'Luis Perez', 'email': 'luis@email.com', 'telefono': '6666-7777', 'direccion': 'Santa Ana, San Jose'}
+2026-06-18 09:39:47,807 - app.models.cliente - INFO - Cliente creado con ID: 672ff516-e3a5-484a-a87a-ad1445d2e95a
+2026-06-18 09:39:47,807 - app.controllers.cliente_controller - INFO - Cliente registrado: luis@email.com (ID: 672ff516-e3a5-484a-a87a-ad1445d2e95a)
+2026-06-18 09:39:47,808 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 09:39:47] "[35m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 201 -
+2026-06-18 09:39:52,836 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-18 09:39:52,837 - app - INFO - Body: {'nombre': 'Maria Gonzalez', 'email': 'maria@email.com', 'telefono': '8765-4321', 'direccion': 'San Pedro, Montes de Oca'}
+2026-06-18 09:39:52,845 - app.models.cliente - INFO - Cliente creado con ID: 89b072a2-898f-40b2-a4cc-fc8081f8adf7
+2026-06-18 09:39:52,845 - app.controllers.cliente_controller - INFO - Cliente registrado: maria@email.com (ID: 89b072a2-898f-40b2-a4cc-fc8081f8adf7)
+2026-06-18 09:39:52,846 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 09:39:52] "[35m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 201 -
+2026-06-18 09:39:57,492 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-18 09:39:57,493 - app - INFO - Body: {'nombre': 'Jose Fernandez', 'email': 'jose@email.com', 'telefono': '1234-5678', 'direccion': 'Heredia, Costa Rica'}
+2026-06-18 09:39:57,511 - app.models.cliente - INFO - Cliente creado con ID: 79a34b5a-e9fe-46e9-9ab3-4d76cbfdc5f1
+2026-06-18 09:39:57,511 - app.controllers.cliente_controller - INFO - Cliente registrado: jose@email.com (ID: 79a34b5a-e9fe-46e9-9ab3-4d76cbfdc5f1)
+2026-06-18 09:39:57,512 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 09:39:57] "[35m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 201 -
+2026-06-18 09:43:38,212 - app - INFO - [Clientes Service] GET /api/clientes/listar
+2026-06-18 09:43:38,222 - app.controllers.cliente_controller - INFO - Listados 6 clientes (total: 6)
+2026-06-18 09:43:38,223 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 09:43:38] "GET /api/clientes/listar HTTP/1.1" 200 -
+2026-06-18 09:44:30,030 - app - INFO - [Clientes Service] GET /api/clientes/listar
+2026-06-18 09:44:30,042 - app.controllers.cliente_controller - INFO - Listados 2 clientes (total: 6)
+2026-06-18 09:44:30,043 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 09:44:30] "GET /api/clientes/listar?limite=2&offset=0 HTTP/1.1" 200 -
+2026-06-18 09:45:30,117 - app - INFO - [Clientes Service] GET /api/clientes/550e8400-e29b-41d4-a716-446655440000
+2026-06-18 09:45:30,125 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 09:45:30] "[33mGET /api/clientes/550e8400-e29b-41d4-a716-446655440000 HTTP/1.1[0m" 404 -
+2026-06-18 09:45:52,765 - app - INFO - [Clientes Service] GET /api/clientes/1
+2026-06-18 09:45:52,773 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 09:45:52] "[33mGET /api/clientes/1 HTTP/1.1[0m" 404 -
+2026-06-18 09:46:10,767 - app - INFO - [Clientes Service] GET /api/clientes/test-001
+2026-06-18 09:46:10,773 - app.controllers.cliente_controller - INFO - Cliente obtenido: test-001
+2026-06-18 09:46:10,773 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 09:46:10] "GET /api/clientes/test-001 HTTP/1.1" 200 -
+2026-06-18 09:46:39,645 - app - INFO - [Clientes Service] PUT /api/clientes/550e8400-e29b-41d4-a716-446655440000
+2026-06-18 09:46:39,646 - app - INFO - Body: {'nombre': 'Carlos Rodriguez Actualizado', 'email': 'carlos.actualizado@email.com', 'telefono': '9999-8888', 'direccion': 'Nueva direccion, San Jose'}
+2026-06-18 09:46:39,652 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 09:46:39] "[33mPUT /api/clientes/550e8400-e29b-41d4-a716-446655440000 HTTP/1.1[0m" 404 -
+2026-06-18 10:12:04,256 - app - INFO - [Clientes Service] GET /api/clientes/id-invalido
+2026-06-18 10:12:04,263 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 10:12:04] "[33mGET /api/clientes/id-invalido HTTP/1.1[0m" 404 -
+2026-06-18 10:12:15,461 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-18 10:12:15,462 - app - INFO - Body: {'nombre': 'Cliente Incompleto', 'email': 'incompleto@email.com'}
+2026-06-18 10:12:15,462 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 10:12:15] "[31m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 400 -
+2026-06-18 10:12:22,397 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-18 10:12:22,397 - app - INFO - Body: {'nombre': 'Carlos Duplicado', 'email': 'carlos@email.com', 'telefono': '8888-9999', 'direccion': 'San Pedro, San Jose'}
+2026-06-18 10:12:22,428 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 10:12:22] "[31m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 400 -
+2026-06-18 10:16:05,398 - app - INFO - [Clientes Service] PUT /api/clientes/test-001
+2026-06-18 10:16:05,399 - app - INFO - Body: {'nombre': 'Carlos Rodriguez Actualizado', 'email': 'carlos.actualizado@email.com', 'telefono': '9999-8888', 'direccion': 'Nueva direccion, San Jose'}
+2026-06-18 10:16:05,406 - app.models.cliente - INFO - Cliente actualizado: test-001
+2026-06-18 10:16:05,406 - app.controllers.cliente_controller - INFO - Cliente actualizado: test-001
+2026-06-18 10:16:05,407 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 10:16:05] "PUT /api/clientes/test-001 HTTP/1.1" 200 -
+2026-06-18 10:16:25,430 - app - INFO - [Clientes Service] PUT /api/clientes/test-001
+2026-06-18 10:16:25,430 - app - INFO - Body: {'nombre': '', 'telefono': ''}
+2026-06-18 10:16:25,437 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 10:16:25] "[31m[1mPUT /api/clientes/test-001 HTTP/1.1[0m" 400 -
+2026-06-18 10:17:30,645 - app - INFO - [Clientes Service] DELETE /api/clientes/id-invalido
+2026-06-18 10:17:30,681 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 10:17:30] "[33mDELETE /api/clientes/id-invalido HTTP/1.1[0m" 404 -
+2026-06-18 10:18:40,688 - app - INFO - [Clientes Service] DELETE /api/clientes/79a34b5a-e9fe-46e9-9ab3-4d76cbfdc5f1
+2026-06-18 10:18:40,698 - app.models.cliente - INFO - Cliente eliminado: 79a34b5a-e9fe-46e9-9ab3-4d76cbfdc5f1
+2026-06-18 10:18:40,699 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 10:18:40] "DELETE /api/clientes/79a34b5a-e9fe-46e9-9ab3-4d76cbfdc5f1 HTTP/1.1" 200 -
+2026-06-18 10:20:28,046 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-18 10:20:28,046 - app - INFO - Body: {'nombre': 'Roberto Sanchez', 'email': 'roberto.sanchez@email.com', 'telefono': '1111-2222', 'direccion': 'San Francisco, Heredia'}
+2026-06-18 10:20:28,056 - app.models.cliente - INFO - Cliente creado con ID: f78c4448-e738-4fd3-bfa1-73f3f0b66448
+2026-06-18 10:20:28,056 - app.controllers.cliente_controller - INFO - Cliente registrado: roberto.sanchez@email.com (ID: f78c4448-e738-4fd3-bfa1-73f3f0b66448)
+2026-06-18 10:20:28,057 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 10:20:28] "[35m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 201 -
+2026-06-18 10:20:43,010 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-18 10:20:43,010 - app - INFO - Body: {'nombre': 'Patricia Castro', 'email': 'patricia.castro@email.com', 'telefono': '3333-4444', 'direccion': 'Alajuela Centro, Alajuela'}
+2026-06-18 10:20:43,019 - app.models.cliente - INFO - Cliente creado con ID: 0418f3b5-1808-4d73-ad29-57acbbce2347
+2026-06-18 10:20:43,019 - app.controllers.cliente_controller - INFO - Cliente registrado: patricia.castro@email.com (ID: 0418f3b5-1808-4d73-ad29-57acbbce2347)
+2026-06-18 10:20:43,020 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 10:20:43] "[35m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 201 -
+2026-06-18 10:21:00,318 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-18 10:21:00,319 - app - INFO - Body: {'nombre': 'Miguel Angel Vargas', 'email': 'miguel.vargas@email.com', 'telefono': '5555-6666', 'direccion': 'San Jose, Barrio Amon'}
+2026-06-18 10:21:00,325 - app.models.cliente - INFO - Cliente creado con ID: e6ecc29f-7ee2-4372-9968-84d5eac62178
+2026-06-18 10:21:00,326 - app.controllers.cliente_controller - INFO - Cliente registrado: miguel.vargas@email.com (ID: e6ecc29f-7ee2-4372-9968-84d5eac62178)
+2026-06-18 10:21:00,326 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 10:21:00] "[35m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 201 -
+2026-06-18 10:21:15,528 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-18 10:21:15,540 - app - INFO - Body: {'nombre': 'Carmen Rojas', 'email': 'carmen.rojas@email.com', 'telefono': '7777-8888', 'direccion': 'Cartago, La Lima'}
+2026-06-18 10:21:15,760 - app.models.cliente - INFO - Cliente creado con ID: 844040c2-0c0d-4628-9d8d-95689435118e
+2026-06-18 10:21:15,783 - app.controllers.cliente_controller - INFO - Cliente registrado: carmen.rojas@email.com (ID: 844040c2-0c0d-4628-9d8d-95689435118e)
+2026-06-18 10:21:15,792 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 10:21:15] "[35m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 201 -
+2026-06-18 10:23:46,500 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-18 10:23:46,501 - app - INFO - Body: {'nombre': 'Jorge Morales', 'email': 'jorge.morales@email.com', 'telefono': '9999-0000', 'direccion': 'Santa Ana, San Jose'}
+2026-06-18 10:23:46,508 - app.models.cliente - INFO - Cliente creado con ID: e8d2ca6b-8357-4c3f-abe2-ac1b716307fc
+2026-06-18 10:23:46,508 - app.controllers.cliente_controller - INFO - Cliente registrado: jorge.morales@email.com (ID: e8d2ca6b-8357-4c3f-abe2-ac1b716307fc)
+2026-06-18 10:23:46,509 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 10:23:46] "[35m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 201 -
+2026-06-18 10:24:07,974 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-18 10:24:07,974 - app - INFO - Body: {'nombre': 'Martha Jimenez', 'email': 'martha.jimenez@email.com', 'telefono': '1212-3434', 'direccion': 'Heredia, San Pablo'}
+2026-06-18 10:24:07,984 - app.models.cliente - INFO - Cliente creado con ID: 00b6aa53-40b6-4e10-87a7-f54b49cbbb98
+2026-06-18 10:24:07,984 - app.controllers.cliente_controller - INFO - Cliente registrado: martha.jimenez@email.com (ID: 00b6aa53-40b6-4e10-87a7-f54b49cbbb98)
+2026-06-18 10:24:07,985 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 10:24:07] "[35m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 201 -
+2026-06-18 10:24:20,335 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-18 10:24:20,335 - app - INFO - Body: {'nombre': 'Ricardo Flores', 'email': 'ricardo.flores@email.com', 'telefono': '5656-7878', 'direccion': 'Alajuela, San Ramon'}
+2026-06-18 10:24:20,369 - app.models.cliente - INFO - Cliente creado con ID: 8bdb16e8-e1fd-48ef-90cf-fb5b4d227742
+2026-06-18 10:24:20,370 - app.controllers.cliente_controller - INFO - Cliente registrado: ricardo.flores@email.com (ID: 8bdb16e8-e1fd-48ef-90cf-fb5b4d227742)
+2026-06-18 10:24:20,372 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 10:24:20] "[35m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 201 -
+2026-06-18 10:24:39,547 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-18 10:24:39,548 - app - INFO - Body: {'nombre': 'Silvia Pereira', 'email': 'silvia.pereira@email.com', 'telefono': '9090-1212', 'direccion': 'Escazu, San Jose'}
+2026-06-18 10:24:39,763 - app.models.cliente - INFO - Cliente creado con ID: 9cd4c150-85d1-4dd9-8c84-d675e38a9e1e
+2026-06-18 10:24:39,779 - app.controllers.cliente_controller - INFO - Cliente registrado: silvia.pereira@email.com (ID: 9cd4c150-85d1-4dd9-8c84-d675e38a9e1e)
+2026-06-18 10:24:39,780 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 10:24:39] "[35m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 201 -
+2026-06-18 10:24:51,665 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-18 10:24:51,665 - app - INFO - Body: {'nombre': 'Mario Venegas', 'email': 'mario.venegas@email.com', 'telefono': '0000-1111', 'direccion': 'Pavas, San Jose'}
+2026-06-18 10:24:51,674 - app.models.cliente - INFO - Cliente creado con ID: 3b5fbe49-3e9b-4a6f-bdf6-f5d0a1117d15
+2026-06-18 10:24:51,674 - app.controllers.cliente_controller - INFO - Cliente registrado: mario.venegas@email.com (ID: 3b5fbe49-3e9b-4a6f-bdf6-f5d0a1117d15)
+2026-06-18 10:24:51,676 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2026 10:24:51] "[35m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 201 -

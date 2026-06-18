@@ -1,0 +1,112 @@
+[{
+  "_id": "test-001",
+  "nombre": "Carlos Rodriguez Actualizado",
+  "email": "carlos.actualizado@email.com",
+  "telefono": "9999-8888",
+  "direccion": "Nueva direccion, San Jose",
+  "fechaRegistro": "2024-01-15T10:30:00.000000"
+},
+{
+  "_id": "cbf2ba64-93ce-41ec-97f2-82bdae68e4d5",
+  "nombre": "Carlos Rodriguez",
+  "email": "carlos@email.com",
+  "telefono": "2222-3333",
+  "direccion": "Curridabat, San Jose",
+  "fechaRegistro": "2026-06-18T09:37:01.741968"
+},
+{
+  "_id": "c5589862-0513-4cc6-8db3-8863eb2a467d",
+  "nombre": "Ana Martinez",
+  "email": "ana@email.com",
+  "telefono": "4444-5555",
+  "direccion": "Escazu, San Jose",
+  "fechaRegistro": "2026-06-18T09:39:43.208787"
+},
+{
+  "_id": "672ff516-e3a5-484a-a87a-ad1445d2e95a",
+  "nombre": "Luis Perez",
+  "email": "luis@email.com",
+  "telefono": "6666-7777",
+  "direccion": "Santa Ana, San Jose",
+  "fechaRegistro": "2026-06-18T09:39:47.807080"
+},
+{
+  "_id": "89b072a2-898f-40b2-a4cc-fc8081f8adf7",
+  "nombre": "Maria Gonzalez",
+  "email": "maria@email.com",
+  "telefono": "8765-4321",
+  "direccion": "San Pedro, Montes de Oca",
+  "fechaRegistro": "2026-06-18T09:39:52.845017"
+},
+{
+  "_id": "f78c4448-e738-4fd3-bfa1-73f3f0b66448",
+  "nombre": "Roberto Sanchez",
+  "email": "roberto.sanchez@email.com",
+  "telefono": "1111-2222",
+  "direccion": "San Francisco, Heredia",
+  "fechaRegistro": "2026-06-18T10:20:28.055326"
+},
+{
+  "_id": "0418f3b5-1808-4d73-ad29-57acbbce2347",
+  "nombre": "Patricia Castro",
+  "email": "patricia.castro@email.com",
+  "telefono": "3333-4444",
+  "direccion": "Alajuela Centro, Alajuela",
+  "fechaRegistro": "2026-06-18T10:20:43.018852"
+},
+{
+  "_id": "e6ecc29f-7ee2-4372-9968-84d5eac62178",
+  "nombre": "Miguel Angel Vargas",
+  "email": "miguel.vargas@email.com",
+  "telefono": "5555-6666",
+  "direccion": "San Jose, Barrio Amon",
+  "fechaRegistro": "2026-06-18T10:21:00.325260"
+},
+{
+  "_id": "844040c2-0c0d-4628-9d8d-95689435118e",
+  "nombre": "Carmen Rojas",
+  "email": "carmen.rojas@email.com",
+  "telefono": "7777-8888",
+  "direccion": "Cartago, La Lima",
+  "fechaRegistro": "2026-06-18T10:21:15.722170"
+},
+{
+  "_id": "e8d2ca6b-8357-4c3f-abe2-ac1b716307fc",
+  "nombre": "Jorge Morales",
+  "email": "jorge.morales@email.com",
+  "telefono": "9999-0000",
+  "direccion": "Santa Ana, San Jose",
+  "fechaRegistro": "2026-06-18T10:23:46.508093"
+},
+{
+  "_id": "00b6aa53-40b6-4e10-87a7-f54b49cbbb98",
+  "nombre": "Martha Jimenez",
+  "email": "martha.jimenez@email.com",
+  "telefono": "1212-3434",
+  "direccion": "Heredia, San Pablo",
+  "fechaRegistro": "2026-06-18T10:24:07.983275"
+},
+{
+  "_id": "8bdb16e8-e1fd-48ef-90cf-fb5b4d227742",
+  "nombre": "Ricardo Flores",
+  "email": "ricardo.flores@email.com",
+  "telefono": "5656-7878",
+  "direccion": "Alajuela, San Ramon",
+  "fechaRegistro": "2026-06-18T10:24:20.368755"
+},
+{
+  "_id": "9cd4c150-85d1-4dd9-8c84-d675e38a9e1e",
+  "nombre": "Silvia Pereira",
+  "email": "silvia.pereira@email.com",
+  "telefono": "9090-1212",
+  "direccion": "Escazu, San Jose",
+  "fechaRegistro": "2026-06-18T10:24:39.759175"
+},
+{
+  "_id": "3b5fbe49-3e9b-4a6f-bdf6-f5d0a1117d15",
+  "nombre": "Mario Venegas",
+  "email": "mario.venegas@email.com",
+  "telefono": "0000-1111",
+  "direccion": "Pavas, San Jose",
+  "fechaRegistro": "2026-06-18T10:24:51.673360"
+}]
