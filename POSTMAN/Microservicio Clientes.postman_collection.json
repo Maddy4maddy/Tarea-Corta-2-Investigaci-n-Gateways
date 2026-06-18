@@ -1,0 +1,346 @@
+{
+  "info": {
+    "_postman_id": "34ba9451-5b89-49fc-976e-feecdb5c583a",
+    "name": "Microservicio Clientes",
+    "description": "Colección completa para probar el Microservicio Clientes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55545143",
+    "_collection_link": "https://go.postman.co/collection/55545143-34ba9451-5b89-49fc-976e-feecdb5c583a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3003/health",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar todos los clientes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3003/api/clientes/listar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "api",
+            "clientes",
+            "listar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener cliente por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3003/api/clientes/test-001",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "api",
+            "clientes",
+            "test-001"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Error - Obtener cliente con ID invalido",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3003/api/clientes/id-invalido",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "api",
+            "clientes",
+            "id-invalido"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Registrar Cliente",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nombre\": \"Carlos Rodriguez\",\n    \"email\": \"carlos@email.com\",\n    \"telefono\": \"2222-3333\",\n    \"direccion\": \"Curridabat, San Jose\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3003/api/clientes/registrar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "api",
+            "clientes",
+            "registrar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Error - Registrar Cliente con campos faltantes",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nombre\": \"Cliente Incompleto\",\n    \"email\": \"incompleto@email.com\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3003/api/clientes/registrar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "api",
+            "clientes",
+            "registrar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Error - Registrar Cliente con email duplicado",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nombre\": \"Carlos Duplicado\",\n    \"email\": \"carlos@email.com\",\n    \"telefono\": \"8888-9999\",\n    \"direccion\": \"San Pedro, San Jose\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3003/api/clientes/registrar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "api",
+            "clientes",
+            "registrar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar cliente - Todos los campos",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nombre\": \"Carlos Rodriguez Actualizado\",\n    \"email\": \"carlos.actualizado@email.com\",\n    \"telefono\": \"9999-8888\",\n    \"direccion\": \"Nueva direccion, San Jose\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3003/api/clientes/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "api",
+            "clientes",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Error - Actualizar cliente con campos vacios",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nombre\": \"\",\n    \"telefono\": \"\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3003/api/clientes/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "api",
+            "clientes",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar cliente",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3003/api/clientes/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "api",
+            "clientes",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Error - Eliminar cliente con ID invalido",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3003/api/clientes/id-invalido",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "api",
+            "clientes",
+            "id-invalido"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Error - Ruta no encontrada",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3003/api/ruta-invalida",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "api",
+            "ruta-invalida"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Error - Content-Type incorrecto",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/plain"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nombre\": \"Test\", \"email\": \"test@email.com\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3003/api/clientes/registrar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3003",
+          "path": [
+            "api",
+            "clientes",
+            "registrar"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "id",
+      "value": "550e8400-e29b-41d4-a716-446655440000"
+    },
+    {
+      "key": "base_url",
+      "value": "http://localhost:3003"
+    }
+  ]
+}
