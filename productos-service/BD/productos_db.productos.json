@@ -1,0 +1,9 @@
+[{
+  "_id": {
+    "$oid": "6a3c5500d234fe75ae88781d"
+  },
+  "nombre": "Laptop Lenovo",
+  "descripcion": "Core i7 16GB RAM",
+  "precio": 750000,
+  "stock": 10
+}]

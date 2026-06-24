@@ -1,0 +1,36 @@
+### Obtener productos
+GET http://localhost:5001/api/productos/
+
+###
+
+### Crear producto
+POST http://localhost:5001/api/productos/
+Content-Type: application/json
+
+{
+    "nombre": "Laptop Lenovo",
+    "descripcion": "Core i7 16GB RAM",
+    "precio": 750000,
+    "stock": 10
+}
+
+###
+
+### Obtener por ID
+GET http://localhost:5001/api/productos/COLOQUE_ID
+
+###
+
+### Actualizar
+PUT http://localhost:5001/api/productos/COLOQUE_ID
+Content-Type: application/json
+
+{
+    "precio": 800000,
+    "stock": 5
+}
+
+###
+
+### Eliminar
+DELETE http://localhost:5001/api/productos/COLOQUE_ID

@@ -1,0 +1,77 @@
+{
+  "info": {
+    "_postman_id": "productos-service-v2",
+    "name": "Productos Service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3001/health"
+      }
+    },
+    {
+      "name": "Registrar Producto",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Laptop Lenovo\",\n  \"descripcion\": \"Core i7 16GB RAM\",\n  \"precio\": 750000,\n  \"stock\": 10\n}"
+        },
+        "url": "http://localhost:3001/api/productos/registrar"
+      }
+    },
+    {
+      "name": "Listar Productos",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3001/api/productos/listar"
+      }
+    },
+    {
+      "name": "Obtener Producto por ID",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3001/api/productos/{{producto_id}}"
+      }
+    },
+    {
+      "name": "Actualizar Producto",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Laptop Lenovo Actualizada\",\n  \"descripcion\": \"Core i9 32GB RAM\",\n  \"precio\": 950000,\n  \"stock\": 5\n}"
+        },
+        "url": "http://localhost:3001/api/productos/{{producto_id}}"
+      }
+    },
+    {
+      "name": "Eliminar Producto",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:3001/api/productos/{{producto_id}}"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "producto_id",
+      "value": ""
+    }
+  ]
+}
