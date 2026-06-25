@@ -136,7 +136,7 @@ if __name__ == '__main__':
     logger.info(f"MongoDB URI: {Config.MONGODB_URI}")
     logger.info(f"Base de datos: {Config.MONGODB_DB}")
     logger.info(f"Clientes service: {Config.CLIENTES_SERVICE_URL} (validar={Config.VALIDAR_CLIENTE})")
-    logger.info(f"Productos service: {Config.PRODUCTOS_SERVICE_URL} (validar={Config.VALIDAR_PRODUCTO}) [en espera si False]")
+    logger.info(f"Productos service: {Config.PRODUCTOS_SERVICE_URL} (validar={Config.VALIDAR_PRODUCTO})")
     logger.info(f"Debug mode: {Config.DEBUG}")
     logger.info("=" * 50)
     app.run(host='0.0.0.0', port=Config.PORT, debug=Config.DEBUG)

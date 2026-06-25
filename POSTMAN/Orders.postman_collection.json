@@ -1,0 +1,231 @@
+{
+  "info": {
+    "_postman_id": "orders-microservice-p3",
+    "name": "Microservicio Órdenes",
+    "description": "Pruebas del microservicio de Órdenes. Corre en http://localhost:5002. Para CREAR una orden, 'cliente_id' y 'producto_id' deben existir en los microservicios de Clientes (:3003) y Productos (:3001); la orden los valida por comunicación inter-servicio. 'Crear orden' guarda el id devuelto en la variable orden_id para los siguientes requests.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/health",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear Orden (válida)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{host}}/api/ordenes/",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "api",
+            "ordenes"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cliente_id\": \"{{cliente_id}}\",\n  \"producto_id\": \"{{producto_id}}\",\n  \"cantidad\": 2\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "if (pm.response.code < 300) {",
+              "  var d = pm.response.json();",
+              "  if (d && d.orden._id) { pm.collection.variables.set('orden_id', d.orden._id); }",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Listar Órdenes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/api/ordenes/",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "api",
+            "ordenes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener Orden por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/api/ordenes/{{orden_id}}",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "api",
+            "ordenes",
+            "{{orden_id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Resumen Orden (orden + cliente + producto)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/api/ordenes/resumen/{{orden_id}}",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "api",
+            "ordenes",
+            "resumen",
+            "{{orden_id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear Orden INVÁLIDA (faltan campos)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{host}}/api/ordenes/",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "api",
+            "ordenes"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cliente_id\": \"{{cliente_id}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear Orden INVÁLIDA (cliente inexistente)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{host}}/api/ordenes/",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "api",
+            "ordenes"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cliente_id\": \"id-que-no-existe\",\n  \"producto_id\": \"{{producto_id}}\",\n  \"cantidad\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar Orden",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/api/ordenes/{{orden_id}}",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "api",
+            "ordenes",
+            "{{orden_id}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "host",
+      "value": "http://localhost:5002"
+    },
+    {
+      "key": "cliente_id",
+      "value": "PEGUE_UN_ID_DE_CLIENTE_REAL"
+    },
+    {
+      "key": "producto_id",
+      "value": "PEGUE_UN_ID_DE_PRODUCTO_REAL"
+    },
+    {
+      "key": "orden_id",
+      "value": ""
+    }
+  ]
+}

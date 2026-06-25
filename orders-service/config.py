@@ -17,20 +17,16 @@ class Config:
     # ---- CORS ----
     CORS_ORIGINS = ['*']
 
-    # ---- Comunicacion inter-servicio ----
-    # CLIENTES: microservicio ya existente en el repositorio.
+    # ---- Comunicacion inter-servicio (OBLIGATORIA) ----
+    # Para crear una orden, este microservicio consulta a Clientes y a Productos
+    # y valida que ambos existan antes de registrar el pedido.
     CLIENTES_SERVICE_URL = os.getenv('CLIENTES_SERVICE_URL', 'http://localhost:3003')
-    # PRODUCTOS: microservicio de la Persona 1, AUN NO TERMINADO.
-    # El cliente esta listo (Clients/producto_service_client.py); se activa
-    # poniendo VALIDAR_PRODUCTO=True cuando el servicio de Productos exista.
     PRODUCTOS_SERVICE_URL = os.getenv('PRODUCTOS_SERVICE_URL', 'http://localhost:3001')
 
     SERVICE_TIMEOUT = int(os.getenv('SERVICE_TIMEOUT', 5))
 
-    # Validacion del cliente: ACTIVA (Clientes ya existe).
+    # Validacion contra Clientes: ACTIVA. Verifica que el cliente exista.
     VALIDAR_CLIENTE = os.getenv('VALIDAR_CLIENTE', 'True').lower() == 'true'
-    # Validacion del producto: DESACTIVADA por defecto (en espera de Productos).
-    # Mientras este en False, el precio_unitario se toma del cuerpo de la peticion.
-    # Cuando Productos este listo, poner VALIDAR_PRODUCTO=True y el precio se
-    # tomara automaticamente del microservicio de Productos.
-    VALIDAR_PRODUCTO = os.getenv('VALIDAR_PRODUCTO', 'False').lower() == 'true'
+    # Validacion contra Productos: ACTIVA. Verifica que el producto exista y
+    # toma su precio real (el precio NO se confia al cuerpo de la peticion).
+    VALIDAR_PRODUCTO = os.getenv('VALIDAR_PRODUCTO', 'True').lower() == 'true'

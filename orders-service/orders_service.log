@@ -1,0 +1,32 @@
+2026-06-25 09:39:34,770 - __main__ - INFO - ==================================================
+2026-06-25 09:39:34,770 - __main__ - INFO - Servicio Ordenes iniciando...
+2026-06-25 09:39:34,770 - __main__ - INFO - Puerto: 5002
+2026-06-25 09:39:34,770 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-25 09:39:34,770 - __main__ - INFO - Base de datos: ordenes_db
+2026-06-25 09:39:34,770 - __main__ - INFO - Clientes service: http://localhost:3003 (validar=True)
+2026-06-25 09:39:34,770 - __main__ - INFO - Productos service: http://localhost:3001 (validar=True)
+2026-06-25 09:39:34,770 - __main__ - INFO - Debug mode: False
+2026-06-25 09:39:34,770 - __main__ - INFO - ==================================================
+2026-06-25 09:39:43,178 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.100.31:5002
+2026-06-25 09:39:43,178 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-25 09:44:45,689 - __main__ - INFO - [Ordenes Service] POST /api/ordenes
+2026-06-25 09:44:45,690 - __main__ - INFO - Body: {'cliente_id': '753b51f8-1424-4037-a3c6-c673c1b023d6', 'producto_id': '052ae5e3-7ddd-4ebd-b491-41df2cc49f9d', 'cantidad': 2}
+2026-06-25 09:44:45,691 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 09:44:45] "[32mPOST /api/ordenes HTTP/1.1[0m" 308 -
+2026-06-25 09:44:45,699 - __main__ - INFO - [Ordenes Service] POST /api/ordenes/
+2026-06-25 09:44:45,699 - __main__ - INFO - Body: {'cliente_id': '753b51f8-1424-4037-a3c6-c673c1b023d6', 'producto_id': '052ae5e3-7ddd-4ebd-b491-41df2cc49f9d', 'cantidad': 2}
+2026-06-25 09:44:45,699 - Clients.cliente_service_client - INFO - [inter-servicio] GET Clientes -> http://localhost:3003/api/clientes/753b51f8-1424-4037-a3c6-c673c1b023d6
+2026-06-25 09:44:47,786 - Clients.cliente_service_client - INFO - [inter-servicio] Cliente 753b51f8-1424-4037-a3c6-c673c1b023d6 validado OK
+2026-06-25 09:44:47,786 - Clients.producto_service_client - INFO - [inter-servicio] GET Productos -> http://localhost:3001/api/productos/052ae5e3-7ddd-4ebd-b491-41df2cc49f9d
+2026-06-25 09:44:49,873 - Clients.producto_service_client - INFO - [inter-servicio] Producto 052ae5e3-7ddd-4ebd-b491-41df2cc49f9d validado OK
+2026-06-25 09:44:49,873 - Repository.db_connection_factory - INFO - [Repository] Conectando a MongoDB: mongodb://localhost:27017/
+2026-06-25 09:44:49,919 - Repository.orden_repository - INFO - [Repository] Orden insertada: 156a82fd-4640-4f00-9254-1ba68b2a227c
+2026-06-25 09:44:49,919 - Services.orden_service - INFO - [Service] Orden creada: 156a82fd-4640-4f00-9254-1ba68b2a227c (total=1500000.0)
+2026-06-25 09:44:49,920 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 09:44:49] "[35m[1mPOST /api/ordenes/ HTTP/1.1[0m" 201 -
+2026-06-25 09:45:10,095 - __main__ - INFO - [Ordenes Service] GET /api/ordenes
+2026-06-25 09:45:10,096 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 09:45:10] "[32mGET /api/ordenes HTTP/1.1[0m" 308 -
+2026-06-25 09:45:10,100 - __main__ - INFO - [Ordenes Service] GET /api/ordenes/
+2026-06-25 09:45:10,104 - Services.orden_service - INFO - [Service] Listadas 1 ordenes (total=1)
+2026-06-25 09:45:10,104 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 09:45:10] "GET /api/ordenes/ HTTP/1.1" 200 -

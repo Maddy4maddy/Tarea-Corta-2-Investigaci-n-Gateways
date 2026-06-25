@@ -74,6 +74,15 @@ class OrdenService(IOrdenService):
                 raise ValidacionError('El producto no tiene un precio valido')
             if nombre_prod:
                 producto_nombre = nombre_prod
+
+            # Validacion de negocio: el producto debe tener stock suficiente.
+            stock = producto.get('stock')
+            if isinstance(stock, (int, float)) and not isinstance(stock, bool):
+                if cantidad > stock:
+                    raise ValidacionError(
+                        'Stock insuficiente para el producto solicitado',
+                        {'stock_disponible': int(stock), 'cantidad_solicitada': cantidad}
+                    )
         else:
             # Productos aun no esta listo: el precio_unitario es obligatorio en el body.
             if data.get('precio_unitario') in (None, ''):
