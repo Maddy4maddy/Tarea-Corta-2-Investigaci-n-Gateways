@@ -1,4 +1,4 @@
-# Servicio de Productos API (Flask + MongoDB)
+# MicroServicio de Productos API (MongoDB)
 
 ## Descripción
 API REST para gestión de productos usando Flask y MongoDB.
