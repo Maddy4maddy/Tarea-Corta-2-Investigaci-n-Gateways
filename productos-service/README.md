@@ -67,12 +67,12 @@ GET /health
 ---
 
 ## Obtener productos
-GET http://localhost:5001/api/productos/
+GET http://localhost:3001/api/productos/
 
 ---
 
 ## Crear producto
-POST http://localhost:5001/api/productos/
+POST http://localhost:3001/api/productos/
 Content-Type: application/json
 
 {
@@ -85,12 +85,12 @@ Content-Type: application/json
 ---
 
 ## Obtener por ID
-GET http://localhost:5001/api/productos/COLOQUE_ID
+GET http://localhost:3001/api/productos/ID
 
 ---
 
 ## Actualizar
-PUT http://localhost:5001/api/productos/COLOQUE_ID
+PUT http://localhost:3001/api/productos/ID
 Content-Type: application/json
 
 {
@@ -101,11 +101,11 @@ Content-Type: application/json
 ---
 
 ## Eliminar
-DELETE http://localhost:5001/api/productos/COLOQUE_ID
+DELETE http://localhost:3001/api/productos/ID
 
 ---
 
 ## Notas
 - Base de datos: MongoDB
 - Colección: productos
-- API usa Blueprint con prefijo /api/productos
+- API con prefijo /api/productos
