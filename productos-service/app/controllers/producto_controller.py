@@ -8,114 +8,93 @@ logger = logging.getLogger(__name__)
 
 
 def get_db():
-
-    client = MongoClient(Config.MONGODB_URI)
-
-    return client[Config.MONGODB_DB]
-
-def obtener_producto_por_id(producto_id):
-
     try:
-
-        db = get_db()
-
-        producto = Producto.obtener_producto_por_id(
-            db,
-            producto_id
-        )
-
-        if not producto:
-
-            return jsonify({
-                'error': 'Producto no encontrado',
-                'id': producto_id
-            }), 404
-
-        return jsonify(producto), 200
-
+        client = MongoClient(Config.MONGODB_URI)
+        return client[Config.MONGODB_DB]
     except Exception as e:
-
-        logger.error(str(e))
-
-        return jsonify({
-            'error': 'Error interno del servidor'
-        }), 500
+        logger.error(f"Error al conectar a MongoDB: {str(e)}")
+        raise
 
 
-def actualizar_producto(producto_id):
+def validar_producto(data, actualizacion=False):
 
-    try:
+    campos_requeridos = [
+        'nombre',
+        'descripcion',
+        'precio',
+        'stock'
+    ]
 
-        if not request.is_json:
+    if not actualizacion:
 
-            return jsonify({
-                'error': 'Content-Type debe ser application/json'
-            }), 400
+        campos_faltantes = []
 
-        data = request.get_json()
+        for campo in campos_requeridos:
 
-        db = get_db()
+            if campo not in data:
+                campos_faltantes.append(campo)
 
-        producto = Producto.obtener_producto_por_id(
-            db,
-            producto_id
-        )
+            elif data[campo] is None:
+                campos_faltantes.append(campo)
 
-        if not producto:
+            elif isinstance(data[campo], str) and not data[campo].strip():
+                campos_faltantes.append(campo)
 
-            return jsonify({
-                'error': 'Producto no encontrado'
-            }), 404
+        if campos_faltantes:
+            return {
+                'error': 'Campos requeridos faltantes',
+                'campos_faltantes': campos_faltantes
+            }
 
-        actualizado = Producto.actualizar_producto(
-            db,
-            producto_id,
-            data
-        )
+    if 'nombre' in data:
 
-        return jsonify({
-            'mensaje': 'Producto actualizado exitosamente',
-            'producto': actualizado
-        }), 200
+        if not str(data['nombre']).strip():
+            return {
+                'error': 'El nombre es requerido'
+            }
 
-    except Exception as e:
+    if 'descripcion' in data:
 
-        logger.error(str(e))
+        if not str(data['descripcion']).strip():
+            return {
+                'error': 'La descripción es requerida'
+            }
 
-        return jsonify({
-            'error': 'Error interno del servidor'
-        }), 500
+    if 'precio' in data:
 
+        try:
 
-def eliminar_producto(producto_id):
+            precio = float(data['precio'])
 
-    try:
+            if precio <= 0:
+                return {
+                    'error': 'El precio debe ser mayor que cero'
+                }
 
-        db = get_db()
+        except (ValueError, TypeError):
 
-        eliminado = Producto.eliminar_producto(
-            db,
-            producto_id
-        )
+            return {
+                'error': 'Precio inválido'
+            }
 
-        if not eliminado:
+    if 'stock' in data:
 
-            return jsonify({
-                'error': 'Producto no encontrado'
-            }), 404
+        try:
 
-        return jsonify({
-            'mensaje': 'Producto eliminado exitosamente',
-            'id': producto_id
-        }), 200
+            stock = int(data['stock'])
 
-    except Exception as e:
+            if stock < 0:
+                return {
+                    'error': 'El stock no puede ser negativo'
+                }
 
-        logger.error(str(e))
+        except (ValueError, TypeError):
 
-        return jsonify({
-            'error': 'Error interno del servidor'
-        }), 500
+            return {
+                'error': 'Stock inválido'
+            }
+
+    return None
 
 
 def registrar_producto():
@@ -130,30 +109,20 @@ def registrar_producto():
 
         data = request.get_json()
 
-        campos = [
-            'nombre',
-            'descripcion',
-            'precio',
-            'stock'
-        ]
+        validacion = validar_producto(data)
 
-        faltantes = [
-            campo for campo in campos
-            if campo not in data
-        ]
-
-        if faltantes:
-
-            return jsonify({
-                'error': 'Campos requeridos faltantes',
-                'campos_faltantes': faltantes
-            }), 400
+        if validacion:
+            return jsonify(validacion), 400
 
         db = get_db()
 
         producto = Producto.crear_producto(
             db,
             data
+        )
+
+        logger.info(
+            f"Producto registrado: {producto['nombre']} (ID: {producto['_id']})"
         )
 
         return jsonify({
@@ -163,10 +132,11 @@ def registrar_producto():
 
     except Exception as e:
 
-        logger.error(str(e))
+        logger.error(f"Error al registrar producto: {str(e)}")
 
         return jsonify({
-            'error': 'Error interno del servidor'
+            'error': 'Error interno del servidor',
+            'detalle': str(e) if Config.DEBUG else None
         }), 500
 
 
@@ -199,17 +169,171 @@ def listar_productos():
 
         total = Producto.contar_productos(db)
 
+        logger.info(
+            f"Listados {len(productos)} productos (total: {total})"
+        )
+
         return jsonify({
             'total': total,
+            'offset': offset,
+            'limite': limite,
             'productos': productos
         }), 200
 
     except Exception as e:
 
-        import traceback
-
-        traceback.print_exc()
+        logger.error(
+            f"Error al listar productos: {str(e)}"
+        )
 
         return jsonify({
-            'error': str(e)
+            'error': 'Error interno del servidor',
+            'detalle': str(e) if Config.DEBUG else None
+        }), 500
+
+
+def obtener_producto_por_id(producto_id):
+
+    try:
+
+        db = get_db()
+
+        producto = Producto.obtener_producto_por_id(
+            db,
+            producto_id
+        )
+
+        if not producto:
+
+            return jsonify({
+                'error': 'Producto no encontrado',
+                'id': producto_id
+            }), 404
+
+        producto['_id'] = str(producto['_id'])
+
+        return jsonify(producto), 200
+
+    except Exception as e:
+
+        logger.error(
+            f"Error al obtener producto {producto_id}: {str(e)}"
+        )
+
+        return jsonify({
+            'error': 'Error interno del servidor',
+            'detalle': str(e) if Config.DEBUG else None
+        }), 500
+
+
+def actualizar_producto(producto_id):
+
+    try:
+
+        if not request.is_json:
+
+            return jsonify({
+                'error': 'Content-Type debe ser application/json'
+            }), 400
+
+        data = request.get_json()
+
+        validacion = validar_producto(
+            data,
+            actualizacion=True
+        )
+
+        if validacion:
+            return jsonify(validacion), 400
+
+        db = get_db()
+
+        producto_existente = Producto.obtener_producto_por_id(
+            db,
+            producto_id
+        )
+
+        if not producto_existente:
+
+            return jsonify({
+                'error': 'Producto no encontrado',
+                'id': producto_id
+            }), 404
+
+        producto_actualizado = Producto.actualizar_producto(
+            db,
+            producto_id,
+            data
+        )
+
+        if not producto_actualizado:
+
+            return jsonify({
+                'error': 'No se pudo actualizar el producto'
+            }), 400
+
+        producto_actualizado['_id'] = str(
+            producto_actualizado['_id']
+        )
+
+        return jsonify({
+            'mensaje': 'Producto actualizado exitosamente',
+            'producto': producto_actualizado
+        }), 200
+
+    except Exception as e:
+
+        logger.error(
+            f"Error al actualizar producto {producto_id}: {str(e)}"
+        )
+
+        return jsonify({
+            'error': 'Error interno del servidor',
+            'detalle': str(e) if Config.DEBUG else None
+        }), 500
+
+
+def eliminar_producto(producto_id):
+
+    try:
+
+        db = get_db()
+
+        producto_existente = Producto.obtener_producto_por_id(
+            db,
+            producto_id
+        )
+
+        if not producto_existente:
+
+            return jsonify({
+                'error': 'Producto no encontrado',
+                'id': producto_id
+            }), 404
+
+        eliminado = Producto.eliminar_producto(
+            db,
+            producto_id
+        )
+
+        if not eliminado:
+
+            return jsonify({
+                'error': 'No se pudo eliminar el producto'
+            }), 400
+
+        return jsonify({
+            'mensaje': 'Producto eliminado exitosamente',
+            'id': producto_id
+        }), 200
+
+    except Exception as e:
+
+        logger.error(
+            f"Error al eliminar producto {producto_id}: {str(e)}"
+        )
+
+        return jsonify({
+            'error': 'Error interno del servidor',
+            'detalle': str(e) if Config.DEBUG else None
         }), 500

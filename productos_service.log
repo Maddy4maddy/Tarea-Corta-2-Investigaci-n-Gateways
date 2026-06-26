@@ -10,3 +10,312 @@
  * Running on http://127.0.0.1:3001
  * Running on http://192.168.100.22:3001
 2026-06-24 16:49:51,305 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-24 22:18:51,003 - __main__ - INFO - ==================================================
+2026-06-24 22:18:51,007 - __main__ - INFO - Servicio Productos iniciando...
+2026-06-24 22:18:51,007 - __main__ - INFO - Puerto: 3001
+2026-06-24 22:18:51,008 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-24 22:18:51,008 - __main__ - INFO - Base de datos: productos_db
+2026-06-24 22:18:51,008 - __main__ - INFO - Debug mode: False
+2026-06-24 22:18:51,008 - __main__ - INFO - ==================================================
+2026-06-24 22:18:51,059 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://192.168.100.22:3001
+2026-06-24 22:18:51,059 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-24 22:19:17,731 - app - INFO - [PRODUCTOS] POST /api/productos/registrar
+2026-06-24 22:19:17,731 - app - INFO - Body: {'nombre': 'Laptop Lenovo', 'descripcion': '', 'precio': 750000, 'stock': 10}
+2026-06-24 22:19:17,909 - app.models.producto - INFO - Producto creado: 80e6c0be-b5a2-40d6-949a-5abb18f9eb0f
+2026-06-24 22:19:17,910 - app - INFO - Response Status: 201 CREATED
+2026-06-24 22:19:17,911 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:19:17] "[35m[1mPOST /api/productos/registrar HTTP/1.1[0m" 201 -
+2026-06-24 22:19:32,911 - app - INFO - [PRODUCTOS] POST /api/productos/registrar
+2026-06-24 22:19:32,911 - app - INFO - Body: {'nombre': 'Laptop Lenovo', 'descripcion': 'Core i7 16GB RAM', 'precio': 750000, 'stock': 10}
+2026-06-24 22:19:32,932 - app.models.producto - INFO - Producto creado: b76a2337-c119-4afc-8cfa-3832afe14f78
+2026-06-24 22:19:32,933 - app - INFO - Response Status: 201 CREATED
+2026-06-24 22:19:32,933 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:19:32] "[35m[1mPOST /api/productos/registrar HTTP/1.1[0m" 201 -
+2026-06-24 22:19:50,753 - app - INFO - [PRODUCTOS] DELETE /api/productos/b76a2337-c119-4afc-8cfa-3832afe14f78
+2026-06-24 22:19:50,769 - app - INFO - Response Status: 200 OK
+2026-06-24 22:19:50,769 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:19:50] "DELETE /api/productos/b76a2337-c119-4afc-8cfa-3832afe14f78 HTTP/1.1" 200 -
+2026-06-24 22:21:00,206 - app - INFO - [PRODUCTOS] POST /api/productos/registrar
+2026-06-24 22:21:00,207 - app.controllers.producto_controller - ERROR - 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2026-06-24 22:21:00,207 - app - INFO - Response Status: 500 INTERNAL SERVER ERROR
+2026-06-24 22:21:00,208 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:21:00] "[35m[1mPOST /api/productos/registrar HTTP/1.1[0m" 500 -
+2026-06-24 22:21:11,063 - app - INFO - [PRODUCTOS] POST /api/productos/registrar
+2026-06-24 22:21:11,064 - app - INFO - Body: {'nombre': 'Laptop Lenovo', 'descripcion': '', 'precio': '', 'stock': 10}
+2026-06-24 22:21:11,066 - app.controllers.producto_controller - ERROR - could not convert string to float: ''
+2026-06-24 22:21:11,067 - app - INFO - Response Status: 500 INTERNAL SERVER ERROR
+2026-06-24 22:21:11,067 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:21:11] "[35m[1mPOST /api/productos/registrar HTTP/1.1[0m" 500 -
+2026-06-24 22:29:55,205 - __main__ - INFO - ==================================================
+2026-06-24 22:29:55,205 - __main__ - INFO - Servicio Productos iniciando...
+2026-06-24 22:29:55,205 - __main__ - INFO - Puerto: 3001
+2026-06-24 22:29:55,205 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-24 22:29:55,206 - __main__ - INFO - Base de datos: productos_db
+2026-06-24 22:29:55,206 - __main__ - INFO - Debug mode: False
+2026-06-24 22:29:55,206 - __main__ - INFO - ==================================================
+2026-06-24 22:29:55,222 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://192.168.100.22:3001
+2026-06-24 22:29:55,222 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-24 22:30:03,991 - app - INFO - [PRODUCTOS] GET /api/productos/registrar
+2026-06-24 22:30:04,003 - app - INFO - Response Status: 404 NOT FOUND
+2026-06-24 22:30:04,004 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:30:04] "[33mGET /api/productos/registrar HTTP/1.1[0m" 404 -
+2026-06-24 22:30:12,612 - app - INFO - [PRODUCTOS] POST /api/productos/registrar
+2026-06-24 22:30:12,612 - app - INFO - Body: {'nombre': 'Laptop Lenovo', 'descripcion': '', 'precio': 750000, 'stock': 10}
+2026-06-24 22:30:12,613 - app - INFO - Response Status: 400 BAD REQUEST
+2026-06-24 22:30:12,613 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:30:12] "[31m[1mPOST /api/productos/registrar HTTP/1.1[0m" 400 -
+2026-06-24 22:30:48,735 - app - INFO - [PRODUCTOS] GET /api/productos/1
+2026-06-24 22:30:48,741 - app - INFO - Response Status: 404 NOT FOUND
+2026-06-24 22:30:48,742 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:30:48] "[33mGET /api/productos/1 HTTP/1.1[0m" 404 -
+2026-06-24 22:31:09,037 - app - INFO - [PRODUCTOS] GET /api/productos/listar
+2026-06-24 22:31:09,097 - app.controllers.producto_controller - INFO - Listados 2 productos (total: 2)
+2026-06-24 22:31:09,098 - app - INFO - Response Status: 200 OK
+2026-06-24 22:31:09,098 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:31:09] "GET /api/productos/listar HTTP/1.1" 200 -
+2026-06-24 22:31:23,647 - __main__ - INFO - ==================================================
+2026-06-24 22:31:23,647 - __main__ - INFO - Servicio Productos iniciando...
+2026-06-24 22:31:23,648 - __main__ - INFO - Puerto: 3001
+2026-06-24 22:31:23,648 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-24 22:31:23,648 - __main__ - INFO - Base de datos: productos_db
+2026-06-24 22:31:23,648 - __main__ - INFO - Debug mode: False
+2026-06-24 22:31:23,648 - __main__ - INFO - ==================================================
+2026-06-24 22:31:23,666 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://192.168.100.22:3001
+2026-06-24 22:31:23,666 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-24 22:32:54,136 - app - INFO - [PRODUCTOS] GET /health
+2026-06-24 22:32:54,136 - app - INFO - Response Status: 200 OK
+2026-06-24 22:32:54,138 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:32:54] "GET /health HTTP/1.1" 200 -
+2026-06-24 22:33:11,238 - app - INFO - [PRODUCTOS] POST /api/productos/registrar
+2026-06-24 22:33:11,238 - app - INFO - Body: {'nombre': 'Laptop Lenovo', 'descripcion': 'Core i7 16GB RAM', 'precio': 750000, 'stock': 10}
+2026-06-24 22:33:11,273 - app.models.producto - INFO - Producto creado: a8e47899-9e54-4687-b2db-fd1f56741a1e
+2026-06-24 22:33:11,273 - app.controllers.producto_controller - INFO - Producto registrado: Laptop Lenovo (ID: a8e47899-9e54-4687-b2db-fd1f56741a1e)
+2026-06-24 22:33:11,273 - app - INFO - Response Status: 201 CREATED
+2026-06-24 22:33:11,274 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:33:11] "[35m[1mPOST /api/productos/registrar HTTP/1.1[0m" 201 -
+2026-06-24 22:33:35,862 - app - INFO - [PRODUCTOS] POST /api/productos/registrar
+2026-06-24 22:33:35,863 - app - INFO - Body: {'nombre': 'Laptop Lenovo', 'descripcion': '', 'precio': 750000, 'stock': 10}
+2026-06-24 22:33:35,863 - app - INFO - Response Status: 400 BAD REQUEST
+2026-06-24 22:33:35,863 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:33:35] "[31m[1mPOST /api/productos/registrar HTTP/1.1[0m" 400 -
+2026-06-24 22:33:46,244 - app - INFO - [PRODUCTOS] GET /api/productos/listar
+2026-06-24 22:33:46,253 - app.controllers.producto_controller - INFO - Listados 3 productos (total: 3)
+2026-06-24 22:33:46,253 - app - INFO - Response Status: 200 OK
+2026-06-24 22:33:46,254 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:33:46] "GET /api/productos/listar HTTP/1.1" 200 -
+2026-06-24 22:34:02,252 - app - INFO - [PRODUCTOS] GET /api/productos/a8e47899-9e54-4687-b2db-fd1f56741a1e
+2026-06-24 22:34:02,259 - app - INFO - Response Status: 200 OK
+2026-06-24 22:34:02,259 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:34:02] "GET /api/productos/a8e47899-9e54-4687-b2db-fd1f56741a1e HTTP/1.1" 200 -
+2026-06-24 22:34:12,027 - app - INFO - [PRODUCTOS] GET /api/productos/1
+2026-06-24 22:34:12,034 - app - INFO - Response Status: 404 NOT FOUND
+2026-06-24 22:34:12,034 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:34:12] "[33mGET /api/productos/1 HTTP/1.1[0m" 404 -
+2026-06-24 22:34:25,365 - app - INFO - [PRODUCTOS] PUT /api/productos/a8e47899-9e54-4687-b2db-fd1f56741a1e
+2026-06-24 22:34:25,365 - app - INFO - Body: {'nombre': 'Laptop Lenovo Actualizada', 'descripcion': 'Core i9 32GB RAM', 'precio': 950000, 'stock': 5}
+2026-06-24 22:34:25,384 - app - INFO - Response Status: 200 OK
+2026-06-24 22:34:25,386 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:34:25] "PUT /api/productos/a8e47899-9e54-4687-b2db-fd1f56741a1e HTTP/1.1" 200 -
+2026-06-24 22:34:39,028 - app - INFO - [PRODUCTOS] DELETE /api/productos/a8e47899-9e54-4687-b2db-fd1f56741a1e
+2026-06-24 22:34:39,056 - app - INFO - Response Status: 200 OK
+2026-06-24 22:34:39,057 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:34:39] "DELETE /api/productos/a8e47899-9e54-4687-b2db-fd1f56741a1e HTTP/1.1" 200 -
+2026-06-24 22:34:47,393 - app - INFO - [PRODUCTOS] DELETE /api/productos/1
+2026-06-24 22:34:47,399 - app - INFO - Response Status: 404 NOT FOUND
+2026-06-24 22:34:47,400 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:34:47] "[33mDELETE /api/productos/1 HTTP/1.1[0m" 404 -
+2026-06-24 22:37:01,974 - __main__ - INFO - ==================================================
+2026-06-24 22:37:01,977 - __main__ - INFO - Servicio Productos iniciando...
+2026-06-24 22:37:01,978 - __main__ - INFO - Puerto: 3001
+2026-06-24 22:37:01,978 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-24 22:37:01,978 - __main__ - INFO - Base de datos: productos_db
+2026-06-24 22:37:01,978 - __main__ - INFO - Debug mode: False
+2026-06-24 22:37:01,978 - __main__ - INFO - ==================================================
+2026-06-24 22:37:02,003 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://192.168.100.22:3001
+2026-06-24 22:37:02,003 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-24 22:37:48,557 - app - INFO - [PRODUCTOS] GET /health
+2026-06-24 22:37:48,557 - app - INFO - Response Status: 200 OK
+2026-06-24 22:37:48,558 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:37:48] "GET /health HTTP/1.1" 200 -
+2026-06-24 22:38:15,324 - app - INFO - [PRODUCTOS] POST /api/productos/registrar
+2026-06-24 22:38:15,324 - app - INFO - Body: {'nombre': 'Laptop Lenovo', 'descripcion': '', 'precio': 750000, 'stock': 10}
+2026-06-24 22:38:15,325 - app - INFO - Response Status: 400 BAD REQUEST
+2026-06-24 22:38:15,326 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:38:15] "[31m[1mPOST /api/productos/registrar HTTP/1.1[0m" 400 -
+2026-06-24 22:38:33,337 - app - INFO - [PRODUCTOS] POST /api/productos/registrar
+2026-06-24 22:38:33,338 - app - INFO - Body: {'nombre': 'Laptop Lenovo 2025', 'descripcion': 'Core i7 16GB RAM', 'precio': 750000, 'stock': 10}
+2026-06-24 22:38:33,376 - app.models.producto - INFO - Producto creado: e82ed803-ccb5-4afe-bfa3-53a8ef8f6aee
+2026-06-24 22:38:33,376 - app.controllers.producto_controller - INFO - Producto registrado: Laptop Lenovo 2025 (ID: e82ed803-ccb5-4afe-bfa3-53a8ef8f6aee)
+2026-06-24 22:38:33,377 - app - INFO - Response Status: 201 CREATED
+2026-06-24 22:38:33,378 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:38:33] "[35m[1mPOST /api/productos/registrar HTTP/1.1[0m" 201 -
+2026-06-24 22:38:48,948 - app - INFO - [PRODUCTOS] GET /api/productos/listar
+2026-06-24 22:38:48,979 - app.controllers.producto_controller - INFO - Listados 3 productos (total: 3)
+2026-06-24 22:38:48,980 - app - INFO - Response Status: 200 OK
+2026-06-24 22:38:48,980 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:38:48] "GET /api/productos/listar HTTP/1.1" 200 -
+2026-06-24 22:39:22,594 - app - INFO - [PRODUCTOS] GET /api/productos/e82ed803-ccb5-4afe-bfa3-53a8ef8f6aee
+2026-06-24 22:39:22,601 - app - INFO - Response Status: 200 OK
+2026-06-24 22:39:22,601 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:39:22] "GET /api/productos/e82ed803-ccb5-4afe-bfa3-53a8ef8f6aee HTTP/1.1" 200 -
+2026-06-24 22:39:31,311 - app - INFO - [PRODUCTOS] GET /api/productos/1
+2026-06-24 22:39:31,331 - app - INFO - Response Status: 404 NOT FOUND
+2026-06-24 22:39:31,331 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:39:31] "[33mGET /api/productos/1 HTTP/1.1[0m" 404 -
+2026-06-24 22:39:47,569 - app - INFO - [PRODUCTOS] PUT /api/productos/e82ed803-ccb5-4afe-bfa3-53a8ef8f6aee
+2026-06-24 22:39:47,569 - app - INFO - Body: {'nombre': 'Laptop Lenovo Actualizada', 'descripcion': 'Core i9 32GB RAM', 'precio': 950000, 'stock': 5}
+2026-06-24 22:39:47,591 - app - INFO - Response Status: 200 OK
+2026-06-24 22:39:47,592 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:39:47] "PUT /api/productos/e82ed803-ccb5-4afe-bfa3-53a8ef8f6aee HTTP/1.1" 200 -
+2026-06-24 22:39:58,674 - app - INFO - [PRODUCTOS] PUT /api/productos/1
+2026-06-24 22:39:58,675 - app - INFO - Body: {'nombre': 'Laptop Lenovo Actualizada', 'descripcion': 'Core i9 32GB RAM', 'precio': 950000, 'stock': 5}
+2026-06-24 22:39:58,692 - app - INFO - Response Status: 404 NOT FOUND
+2026-06-24 22:39:58,693 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:39:58] "[33mPUT /api/productos/1 HTTP/1.1[0m" 404 -
+2026-06-24 22:40:08,933 - app - INFO - [PRODUCTOS] DELETE /api/productos/1
+2026-06-24 22:40:08,948 - app - INFO - Response Status: 404 NOT FOUND
+2026-06-24 22:40:08,948 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:40:08] "[33mDELETE /api/productos/1 HTTP/1.1[0m" 404 -
+2026-06-24 22:40:16,918 - app - INFO - [PRODUCTOS] DELETE /api/productos/e82ed803-ccb5-4afe-bfa3-53a8ef8f6aee
+2026-06-24 22:40:16,926 - app - INFO - Response Status: 200 OK
+2026-06-24 22:40:16,926 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:40:16] "DELETE /api/productos/e82ed803-ccb5-4afe-bfa3-53a8ef8f6aee HTTP/1.1" 200 -
+2026-06-24 22:45:52,857 - __main__ - INFO - ==================================================
+2026-06-24 22:45:52,860 - __main__ - INFO - Servicio Productos iniciando...
+2026-06-24 22:45:52,860 - __main__ - INFO - Puerto: 3001
+2026-06-24 22:45:52,861 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-24 22:45:52,861 - __main__ - INFO - Base de datos: productos_db
+2026-06-24 22:45:52,861 - __main__ - INFO - Debug mode: False
+2026-06-24 22:45:52,861 - __main__ - INFO - ==================================================
+2026-06-24 22:45:52,892 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://192.168.100.22:3001
+2026-06-24 22:45:52,892 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-24 22:47:10,176 - __main__ - INFO - ==================================================
+2026-06-24 22:47:10,176 - __main__ - INFO - Servicio Productos iniciando...
+2026-06-24 22:47:10,176 - __main__ - INFO - Puerto: 3001
+2026-06-24 22:47:10,176 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-24 22:47:10,176 - __main__ - INFO - Base de datos: productos_db
+2026-06-24 22:47:10,177 - __main__ - INFO - Debug mode: False
+2026-06-24 22:47:10,177 - __main__ - INFO - ==================================================
+2026-06-24 22:47:10,199 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://192.168.100.22:3001
+2026-06-24 22:47:10,199 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-24 22:47:16,379 - app - INFO - [PRODUCTOS] GET /health
+2026-06-24 22:47:16,387 - app - INFO - Response Status: 200 OK
+2026-06-24 22:47:16,412 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:47:16] "GET /health HTTP/1.1" 200 -
+2026-06-24 22:47:53,373 - app - INFO - [PRODUCTOS] POST /api/productos/registrar
+2026-06-24 22:47:53,374 - app - INFO - Body: {'nombre': 'Laptop Lenovo', 'descripcion': '', 'precio': 750000, 'stock': 10}
+2026-06-24 22:47:53,374 - app - INFO - Response Status: 400 BAD REQUEST
+2026-06-24 22:47:53,374 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:47:53] "[31m[1mPOST /api/productos/registrar HTTP/1.1[0m" 400 -
+2026-06-24 22:48:06,562 - app - INFO - [PRODUCTOS] POST /api/productos/registrar
+2026-06-24 22:48:06,562 - app - INFO - Body: {'nombre': '', 'descripcion': 'J', 'precio': 750000, 'stock': 10}
+2026-06-24 22:48:06,563 - app - INFO - Response Status: 400 BAD REQUEST
+2026-06-24 22:48:06,563 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:48:06] "[31m[1mPOST /api/productos/registrar HTTP/1.1[0m" 400 -
+2026-06-24 22:48:17,031 - app - INFO - [PRODUCTOS] POST /api/productos/registrar
+2026-06-24 22:48:17,032 - app.controllers.producto_controller - ERROR - Error al registrar producto: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2026-06-24 22:48:17,032 - app - INFO - Response Status: 500 INTERNAL SERVER ERROR
+2026-06-24 22:48:17,032 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:48:17] "[35m[1mPOST /api/productos/registrar HTTP/1.1[0m" 500 -
+2026-06-24 22:48:26,575 - app - INFO - [PRODUCTOS] POST /api/productos/registrar
+2026-06-24 22:48:26,575 - app - INFO - Body: {'nombre': 'Laptop Lenovo', 'descripcion': 'J', 'stock': 10}
+2026-06-24 22:48:26,575 - app - INFO - Response Status: 400 BAD REQUEST
+2026-06-24 22:48:26,576 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:48:26] "[31m[1mPOST /api/productos/registrar HTTP/1.1[0m" 400 -
+2026-06-24 22:48:51,015 - app - INFO - [PRODUCTOS] POST /api/productos/registrar
+2026-06-24 22:48:51,015 - app - INFO - Body: {'nombre': 'Laptop Lenovo 2025', 'descripcion': 'Core i7 16GB RAM', 'precio': 750000, 'stock': 10}
+2026-06-24 22:48:51,034 - app.models.producto - INFO - Producto creado: 714a8bbd-19aa-4de6-9616-1ae93eee0298
+2026-06-24 22:48:51,034 - app.controllers.producto_controller - INFO - Producto registrado: Laptop Lenovo 2025 (ID: 714a8bbd-19aa-4de6-9616-1ae93eee0298)
+2026-06-24 22:48:51,034 - app - INFO - Response Status: 201 CREATED
+2026-06-24 22:48:51,035 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:48:51] "[35m[1mPOST /api/productos/registrar HTTP/1.1[0m" 201 -
+2026-06-24 22:49:09,915 - app - INFO - [PRODUCTOS] GET /api/productos/listar
+2026-06-24 22:49:09,946 - app.controllers.producto_controller - INFO - Listados 3 productos (total: 3)
+2026-06-24 22:49:09,947 - app - INFO - Response Status: 200 OK
+2026-06-24 22:49:09,948 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:49:09] "GET /api/productos/listar HTTP/1.1" 200 -
+2026-06-24 22:49:39,205 - app - INFO - [PRODUCTOS] GET /api/productos/714a8bbd-19aa-4de6-9616-1ae93eee0298
+2026-06-24 22:49:39,230 - app - INFO - Response Status: 200 OK
+2026-06-24 22:49:39,230 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:49:39] "GET /api/productos/714a8bbd-19aa-4de6-9616-1ae93eee0298 HTTP/1.1" 200 -
+2026-06-24 22:49:54,099 - app - INFO - [PRODUCTOS] GET /api/productos/3
+2026-06-24 22:49:54,127 - app - INFO - Response Status: 404 NOT FOUND
+2026-06-24 22:49:54,128 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:49:54] "[33mGET /api/productos/3 HTTP/1.1[0m" 404 -
+2026-06-24 22:50:06,799 - app - INFO - [PRODUCTOS] PUT /api/productos/3
+2026-06-24 22:50:06,800 - app - INFO - Body: {'nombre': 'Laptop Lenovo Actualizada', 'descripcion': 'Core i9 32GB RAM', 'precio': 950000, 'stock': 5}
+2026-06-24 22:50:06,807 - app - INFO - Response Status: 404 NOT FOUND
+2026-06-24 22:50:06,808 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:50:06] "[33mPUT /api/productos/3 HTTP/1.1[0m" 404 -
+2026-06-24 22:50:13,664 - app - INFO - [PRODUCTOS] PUT /api/productos/714a8bbd-19aa-4de6-9616-1ae93eee0298
+2026-06-24 22:50:13,664 - app - INFO - Body: {'nombre': 'Laptop Lenovo Actualizada', 'descripcion': 'Core i9 32GB RAM', 'precio': 950000, 'stock': 5}
+2026-06-24 22:50:13,671 - app - INFO - Response Status: 200 OK
+2026-06-24 22:50:13,672 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:50:13] "PUT /api/productos/714a8bbd-19aa-4de6-9616-1ae93eee0298 HTTP/1.1" 200 -
+2026-06-24 22:50:32,550 - app - INFO - [PRODUCTOS] DELETE /api/productos/3
+2026-06-24 22:50:32,565 - app - INFO - Response Status: 404 NOT FOUND
+2026-06-24 22:50:32,567 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:50:32] "[33mDELETE /api/productos/3 HTTP/1.1[0m" 404 -
+2026-06-24 22:50:42,714 - app - INFO - [PRODUCTOS] DELETE /api/productos/714a8bbd-19aa-4de6-9616-1ae93eee0298
+2026-06-24 22:50:42,729 - app - INFO - Response Status: 200 OK
+2026-06-24 22:50:42,729 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2026 22:50:42] "DELETE /api/productos/714a8bbd-19aa-4de6-9616-1ae93eee0298 HTTP/1.1" 200 -
+2026-06-25 19:51:18,716 - __main__ - INFO - ==================================================
+2026-06-25 19:51:18,721 - __main__ - INFO - Servicio Productos iniciando...
+2026-06-25 19:51:18,722 - __main__ - INFO - Puerto: 3001
+2026-06-25 19:51:18,722 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-25 19:51:18,722 - __main__ - INFO - Base de datos: productos_db
+2026-06-25 19:51:18,723 - __main__ - INFO - Debug mode: False
+2026-06-25 19:51:18,723 - __main__ - INFO - ==================================================
+2026-06-25 19:51:18,755 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://192.168.100.22:3001
+2026-06-25 19:51:18,756 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-25 19:51:27,702 - app - INFO - [PRODUCTOS] POST /api/productos/registrar
+2026-06-25 19:51:27,703 - app - INFO - Body: {'nombre': 'Laptop Lenovo 2025', 'descripcion': 'Core i7 16GB RAM', 'precio': 750000, 'stock': 10}
+2026-06-25 19:51:27,730 - app.models.producto - INFO - Producto creado: 0971d511-d338-48dc-89ba-a655720c96b5
+2026-06-25 19:51:27,731 - app.controllers.producto_controller - INFO - Producto registrado: Laptop Lenovo 2025 (ID: 0971d511-d338-48dc-89ba-a655720c96b5)
+2026-06-25 19:51:27,732 - app - INFO - Response Status: 201 CREATED
+2026-06-25 19:51:27,734 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:51:27] "[35m[1mPOST /api/productos/registrar HTTP/1.1[0m" 201 -
+2026-06-25 19:52:02,261 - app - INFO - [PRODUCTOS] GET /api/productos/listar
+2026-06-25 19:52:02,294 - app.controllers.producto_controller - INFO - Listados 3 productos (total: 3)
+2026-06-25 19:52:02,295 - app - INFO - Response Status: 200 OK
+2026-06-25 19:52:02,296 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:52:02] "GET /api/productos/listar HTTP/1.1" 200 -
+2026-06-25 19:52:57,793 - app - INFO - [PRODUCTOS] GET /api/productos/0971d511-d338-48dc-89ba-a655720c96b5
+2026-06-25 19:52:57,818 - app - INFO - Response Status: 200 OK
+2026-06-25 19:52:57,819 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:52:57] "GET /api/productos/0971d511-d338-48dc-89ba-a655720c96b5 HTTP/1.1" 200 -
+2026-06-25 19:54:09,344 - app - INFO - [PRODUCTOS] GET /api/productos/1
+2026-06-25 19:54:09,359 - app - INFO - Response Status: 404 NOT FOUND
+2026-06-25 19:54:09,360 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:54:09] "[33mGET /api/productos/1 HTTP/1.1[0m" 404 -
+2026-06-25 19:54:52,081 - app - INFO - [PRODUCTOS] PUT /api/productos/0971d511-d338-48dc-89ba-a655720c96b5
+2026-06-25 19:54:52,082 - app - INFO - Body: {'nombre': 'Laptop Lenovo Actualizada', 'descripcion': 'Core i9 32GB RAM', 'precio': 950000, 'stock': 5}
+2026-06-25 19:54:52,098 - app - INFO - Response Status: 200 OK
+2026-06-25 19:54:52,099 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:54:52] "PUT /api/productos/0971d511-d338-48dc-89ba-a655720c96b5 HTTP/1.1" 200 -
+2026-06-25 19:56:21,970 - app - INFO - [PRODUCTOS] PUT /api/productos/1
+2026-06-25 19:56:21,970 - app - INFO - Body: {'nombre': 'Laptop Lenovo Actualizada', 'descripcion': 'Core i9 32GB RAM', 'precio': 950000, 'stock': 5}
+2026-06-25 19:56:21,979 - app - INFO - Response Status: 404 NOT FOUND
+2026-06-25 19:56:21,980 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:56:21] "[33mPUT /api/productos/1 HTTP/1.1[0m" 404 -
+2026-06-25 19:56:55,054 - app - INFO - [PRODUCTOS] DELETE /api/productos/0971d511-d338-48dc-89ba-a655720c96b5
+2026-06-25 19:56:55,091 - app - INFO - Response Status: 200 OK
+2026-06-25 19:56:55,092 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:56:55] "DELETE /api/productos/0971d511-d338-48dc-89ba-a655720c96b5 HTTP/1.1" 200 -
+2026-06-25 19:57:41,868 - app - INFO - [PRODUCTOS] DELETE /api/productos/1
+2026-06-25 19:57:41,906 - app - INFO - Response Status: 404 NOT FOUND
+2026-06-25 19:57:41,907 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:57:41] "[33mDELETE /api/productos/1 HTTP/1.1[0m" 404 -
+2026-06-25 19:58:27,182 - app - INFO - [PRODUCTOS] POST /api/productos/registrar
+2026-06-25 19:58:27,182 - app - INFO - Body: {'nombre': 'Laptop Lenovo', 'descripcion': 'J', 'stock': 10}
+2026-06-25 19:58:27,183 - app - INFO - Response Status: 400 BAD REQUEST
+2026-06-25 19:58:27,184 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:58:27] "[31m[1mPOST /api/productos/registrar HTTP/1.1[0m" 400 -
+2026-06-25 20:04:22,031 - __main__ - INFO - ==================================================
+2026-06-25 20:04:22,032 - __main__ - INFO - Servicio Productos iniciando...
+2026-06-25 20:04:22,032 - __main__ - INFO - Puerto: 3001
+2026-06-25 20:04:22,033 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-25 20:04:22,033 - __main__ - INFO - Base de datos: productos_db
+2026-06-25 20:04:22,034 - __main__ - INFO - Debug mode: False
+2026-06-25 20:04:22,034 - __main__ - INFO - ==================================================
+2026-06-25 20:04:22,076 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://192.168.100.22:3001
+2026-06-25 20:04:22,076 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-25 20:06:22,534 - __main__ - INFO - ==================================================
+2026-06-25 20:06:22,534 - __main__ - INFO - Servicio Productos iniciando...
+2026-06-25 20:06:22,535 - __main__ - INFO - Puerto: 3001
+2026-06-25 20:06:22,535 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-25 20:06:22,535 - __main__ - INFO - Base de datos: productos_db
+2026-06-25 20:06:22,535 - __main__ - INFO - Debug mode: False
+2026-06-25 20:06:22,535 - __main__ - INFO - ==================================================
+2026-06-25 20:06:22,561 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://192.168.100.22:3001
+2026-06-25 20:06:22,561 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-25 20:07:17,058 - __main__ - INFO - ==================================================
+2026-06-25 20:07:17,061 - __main__ - INFO - Servicio Productos iniciando...
+2026-06-25 20:07:17,061 - __main__ - INFO - Puerto: 3001
+2026-06-25 20:07:17,061 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-25 20:07:17,061 - __main__ - INFO - Base de datos: productos_db
+2026-06-25 20:07:17,062 - __main__ - INFO - Debug mode: False
+2026-06-25 20:07:17,062 - __main__ - INFO - ==================================================
+2026-06-25 20:07:17,092 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://192.168.100.22:3001
+2026-06-25 20:07:17,092 - werkzeug - INFO - [33mPress CTRL+C to quit[0m

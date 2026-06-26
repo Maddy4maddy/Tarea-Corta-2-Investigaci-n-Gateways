@@ -1,0 +1,118 @@
+2026-06-25 19:18:39,659 - __main__ - INFO - ==================================================
+2026-06-25 19:18:39,660 - __main__ - INFO - Servicio Clientes iniciando...
+2026-06-25 19:18:39,664 - __main__ - INFO - Puerto: 3003
+2026-06-25 19:18:39,664 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-25 19:18:39,664 - __main__ - INFO - Base de datos: clientes_db
+2026-06-25 19:18:39,665 - __main__ - INFO - Debug mode: False
+2026-06-25 19:18:39,665 - __main__ - INFO - ==================================================
+2026-06-25 19:18:39,701 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3003
+ * Running on http://192.168.100.22:3003
+2026-06-25 19:18:39,702 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-25 19:21:43,129 - app - INFO - [Clientes Service] GET /api/clientes/listar
+2026-06-25 19:21:43,148 - app.controllers.cliente_controller - INFO - Listados 0 clientes (total: 0)
+2026-06-25 19:21:43,150 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:21:43] "GET /api/clientes/listar HTTP/1.1" 200 -
+2026-06-25 19:22:54,464 - app - INFO - [Clientes Service] GET /api/clientes/test-001
+2026-06-25 19:22:54,496 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:22:54] "[33mGET /api/clientes/test-001 HTTP/1.1[0m" 404 -
+2026-06-25 19:25:28,964 - __main__ - INFO - ==================================================
+2026-06-25 19:25:28,966 - __main__ - INFO - Servicio Clientes iniciando...
+2026-06-25 19:25:28,970 - __main__ - INFO - Puerto: 3003
+2026-06-25 19:25:28,971 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-25 19:25:28,971 - __main__ - INFO - Base de datos: clientes_db
+2026-06-25 19:25:28,971 - __main__ - INFO - Debug mode: False
+2026-06-25 19:25:28,971 - __main__ - INFO - ==================================================
+2026-06-25 19:25:28,997 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3003
+ * Running on http://192.168.100.22:3003
+2026-06-25 19:25:28,997 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-25 19:25:39,999 - app - INFO - [Clientes Service] GET /api/clientes/listar
+2026-06-25 19:25:40,061 - app.controllers.cliente_controller - INFO - Listados 0 clientes (total: 0)
+2026-06-25 19:25:40,065 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:25:40] "GET /api/clientes/listar HTTP/1.1" 200 -
+2026-06-25 19:27:40,993 - __main__ - INFO - ==================================================
+2026-06-25 19:27:40,996 - __main__ - INFO - Servicio Clientes iniciando...
+2026-06-25 19:27:41,001 - __main__ - INFO - Puerto: 3003
+2026-06-25 19:27:41,002 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-25 19:27:41,002 - __main__ - INFO - Base de datos: clientes_db
+2026-06-25 19:27:41,003 - __main__ - INFO - Debug mode: False
+2026-06-25 19:27:41,003 - __main__ - INFO - ==================================================
+2026-06-25 19:27:41,050 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3003
+ * Running on http://192.168.100.22:3003
+2026-06-25 19:27:41,050 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-25 19:27:57,238 - app - INFO - [Clientes Service] GET /api/clientes/listar
+2026-06-25 19:27:57,301 - app.controllers.cliente_controller - INFO - Listados 0 clientes (total: 0)
+2026-06-25 19:27:57,306 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:27:57] "GET /api/clientes/listar HTTP/1.1" 200 -
+2026-06-25 19:28:16,413 - app - INFO - [Clientes Service] GET /api/clientes/cbf2ba64-93ce-41ec-97f2-82bdae68e4d5
+2026-06-25 19:28:16,427 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:28:16] "[33mGET /api/clientes/cbf2ba64-93ce-41ec-97f2-82bdae68e4d5 HTTP/1.1[0m" 404 -
+2026-06-25 19:28:55,733 - __main__ - INFO - ==================================================
+2026-06-25 19:28:55,736 - __main__ - INFO - Servicio Clientes iniciando...
+2026-06-25 19:28:55,740 - __main__ - INFO - Puerto: 3003
+2026-06-25 19:28:55,740 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-25 19:28:55,741 - __main__ - INFO - Base de datos: clientes_db
+2026-06-25 19:28:55,741 - __main__ - INFO - Debug mode: False
+2026-06-25 19:28:55,742 - __main__ - INFO - ==================================================
+2026-06-25 19:28:55,766 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3003
+ * Running on http://192.168.100.22:3003
+2026-06-25 19:28:55,767 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-25 19:28:59,690 - app - INFO - [Clientes Service] GET /api/clientes/cbf2ba64-93ce-41ec-97f2-82bdae68e4d5
+2026-06-25 19:28:59,741 - app.controllers.cliente_controller - INFO - Cliente obtenido: cbf2ba64-93ce-41ec-97f2-82bdae68e4d5
+2026-06-25 19:28:59,745 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:28:59] "GET /api/clientes/cbf2ba64-93ce-41ec-97f2-82bdae68e4d5 HTTP/1.1" 200 -
+2026-06-25 19:29:04,735 - app - INFO - [Clientes Service] GET /api/clientes/listar
+2026-06-25 19:29:04,753 - app.controllers.cliente_controller - INFO - Listados 14 clientes (total: 14)
+2026-06-25 19:29:04,755 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:29:04] "GET /api/clientes/listar HTTP/1.1" 200 -
+2026-06-25 19:29:30,889 - app - INFO - [Clientes Service] GET /api/clientes/cbf2ba64-93ce-41ec-97f2-82bdae68e4d5
+2026-06-25 19:29:30,919 - app.controllers.cliente_controller - INFO - Cliente obtenido: cbf2ba64-93ce-41ec-97f2-82bdae68e4d5
+2026-06-25 19:29:30,922 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:29:30] "GET /api/clientes/cbf2ba64-93ce-41ec-97f2-82bdae68e4d5 HTTP/1.1" 200 -
+2026-06-25 19:29:57,528 - app - INFO - [Clientes Service] GET /api/clientes/id-invalido
+2026-06-25 19:29:57,552 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:29:57] "[33mGET /api/clientes/id-invalido HTTP/1.1[0m" 404 -
+2026-06-25 19:32:03,001 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-25 19:32:03,002 - app - INFO - Body: {'nombre': 'Carlos Rodriguez', 'email': 'carlos@email.com', 'telefono': '2222-3333', 'direccion': 'Curridabat, San Jose'}
+2026-06-25 19:32:03,033 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:32:03] "[31m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 400 -
+2026-06-25 19:32:19,082 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-25 19:32:19,082 - app - INFO - Body: {'nombre': 'Carlos Rodriguez', 'email': 'carlosRodriguez@email.com', 'telefono': '2222-3333', 'direccion': 'Curridabat, San Jose'}
+2026-06-25 19:32:19,122 - app.models.cliente - INFO - Cliente creado con ID: b2b9e440-ef2f-4d4c-a4c7-fbf93396b56a
+2026-06-25 19:32:19,123 - app.controllers.cliente_controller - INFO - Cliente registrado: carlosrodriguez@email.com (ID: b2b9e440-ef2f-4d4c-a4c7-fbf93396b56a)
+2026-06-25 19:32:19,125 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:32:19] "[35m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 201 -
+2026-06-25 19:33:09,202 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-25 19:33:09,203 - app - INFO - Body: {'nombre': 'Cliente Incompleto', 'email': 'incompleto@email.com'}
+2026-06-25 19:33:09,204 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:33:09] "[31m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 400 -
+2026-06-25 19:35:47,958 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-25 19:35:47,959 - app - INFO - Body: {'nombre': 'Carlos Duplicado', 'email': 'carlosRodriguez@email.com', 'telefono': '8888-9999', 'direccion': 'San Pedro, San Jose'}
+2026-06-25 19:35:48,008 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:35:48] "[31m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 400 -
+2026-06-25 19:38:04,556 - app - INFO - [Clientes Service] PUT /api/clientes/cbf2ba64-93ce-41ec-97f2-82bdae68e4d5
+2026-06-25 19:38:04,556 - app - INFO - Body: {'nombre': 'Carlos Rodriguez Actualizado', 'email': 'carlos.actualizado@email.com', 'telefono': '9999-8888', 'direccion': 'Nueva direccion, San Jose'}
+2026-06-25 19:38:04,590 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:38:04] "[31m[1mPUT /api/clientes/cbf2ba64-93ce-41ec-97f2-82bdae68e4d5 HTTP/1.1[0m" 400 -
+2026-06-25 19:38:27,918 - app - INFO - [Clientes Service] PUT /api/clientes/cbf2ba64-93ce-41ec-97f2-82bdae68e4d5
+2026-06-25 19:38:27,919 - app - INFO - Body: {'nombre': 'Carlos Rodriguez Actualizado', 'email': 'carlos.actualizado2023@email.com', 'telefono': '9999-8888', 'direccion': 'Nueva direccion, San Jose'}
+2026-06-25 19:38:27,973 - app.models.cliente - INFO - Cliente actualizado: cbf2ba64-93ce-41ec-97f2-82bdae68e4d5
+2026-06-25 19:38:27,974 - app.controllers.cliente_controller - INFO - Cliente actualizado: cbf2ba64-93ce-41ec-97f2-82bdae68e4d5
+2026-06-25 19:38:27,975 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:38:27] "PUT /api/clientes/cbf2ba64-93ce-41ec-97f2-82bdae68e4d5 HTTP/1.1" 200 -
+2026-06-25 19:39:46,247 - app - INFO - [Clientes Service] PUT /api/clientes/cbf2ba64-93ce-41ec-97f2-82bdae68e4d5
+2026-06-25 19:39:46,248 - app - INFO - Body: {'nombre': '', 'telefono': ''}
+2026-06-25 19:39:46,285 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:39:46] "[31m[1mPUT /api/clientes/cbf2ba64-93ce-41ec-97f2-82bdae68e4d5 HTTP/1.1[0m" 400 -
+2026-06-25 19:40:53,539 - app - INFO - [Clientes Service] DELETE /api/clientes/cbf2ba64-93ce-41ec-97f2-82bdae68e4d5
+2026-06-25 19:40:53,574 - app.models.cliente - INFO - Cliente eliminado: cbf2ba64-93ce-41ec-97f2-82bdae68e4d5
+2026-06-25 19:40:53,577 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:40:53] "DELETE /api/clientes/cbf2ba64-93ce-41ec-97f2-82bdae68e4d5 HTTP/1.1" 200 -
+2026-06-25 19:41:27,912 - app - INFO - [Clientes Service] DELETE /api/clientes/id-invalido
+2026-06-25 19:41:27,948 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:41:27] "[33mDELETE /api/clientes/id-invalido HTTP/1.1[0m" 404 -
+2026-06-25 19:42:23,585 - app - INFO - [Clientes Service] GET /api/ruta-invalida
+2026-06-25 19:42:23,587 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:42:23] "[33mGET /api/ruta-invalida HTTP/1.1[0m" 404 -
+2026-06-25 19:42:59,164 - app - INFO - [Clientes Service] POST /api/clientes/registrar
+2026-06-25 19:42:59,167 - werkzeug - INFO - 127.0.0.1 - - [25/Jun/2026 19:42:59] "[31m[1mPOST /api/clientes/registrar HTTP/1.1[0m" 400 -
+2026-06-25 20:07:31,660 - __main__ - INFO - ==================================================
+2026-06-25 20:07:31,663 - __main__ - INFO - Servicio Clientes iniciando...
+2026-06-25 20:07:31,667 - __main__ - INFO - Puerto: 3003
+2026-06-25 20:07:31,667 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-25 20:07:31,667 - __main__ - INFO - Base de datos: clientes_db
+2026-06-25 20:07:31,668 - __main__ - INFO - Debug mode: False
+2026-06-25 20:07:31,668 - __main__ - INFO - ==================================================
+2026-06-25 20:07:31,693 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3003
+ * Running on http://192.168.100.22:3003
+2026-06-25 20:07:31,693 - werkzeug - INFO - [33mPress CTRL+C to quit[0m

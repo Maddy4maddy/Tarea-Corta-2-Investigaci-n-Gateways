@@ -1,0 +1,14 @@
+2026-06-25 20:06:40,936 - __main__ - INFO - ==================================================
+2026-06-25 20:06:40,937 - __main__ - INFO - Servicio Ordenes iniciando...
+2026-06-25 20:06:40,943 - __main__ - INFO - Puerto: 5002
+2026-06-25 20:06:40,943 - __main__ - INFO - MongoDB URI: mongodb://localhost:27017/
+2026-06-25 20:06:40,943 - __main__ - INFO - Base de datos: ordenes_db
+2026-06-25 20:06:40,944 - __main__ - INFO - Clientes service: http://localhost:3003 (validar=True)
+2026-06-25 20:06:40,944 - __main__ - INFO - Productos service: http://localhost:3001 (validar=False) [en espera si False]
+2026-06-25 20:06:40,945 - __main__ - INFO - Debug mode: False
+2026-06-25 20:06:40,945 - __main__ - INFO - ==================================================
+2026-06-25 20:06:40,984 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.100.22:5002
+2026-06-25 20:06:40,985 - werkzeug - INFO - [33mPress CTRL+C to quit[0m

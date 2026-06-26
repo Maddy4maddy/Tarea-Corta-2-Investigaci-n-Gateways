@@ -4,6 +4,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
 class Producto:
 
     COLLECTION = 'productos'
@@ -28,7 +29,9 @@ class Producto:
 
         result = collection.insert_one(producto)
 
-        logger.info(f"Producto creado: {result.inserted_id}")
+        logger.info(
+            f"Producto creado: {result.inserted_id}"
+        )
 
         return producto
 
@@ -42,7 +45,11 @@ class Producto:
         })
 
     @staticmethod
-    def obtener_todos_productos(db, limite=100, offset=0):
+    def obtener_todos_productos(
+        db,
+        limite=100,
+        offset=0
+    ):
 
         collection = Producto.get_collection(db)
 
@@ -61,7 +68,11 @@ class Producto:
         return collection.count_documents({})
 
     @staticmethod
-    def actualizar_producto(db, producto_id, data):
+    def actualizar_producto(
+        db,
+        producto_id,
+        data
+    ):
 
         collection = Producto.get_collection(db)
 
@@ -77,22 +88,24 @@ class Producto:
         for campo in campos:
 
             if campo in data:
-
                 update_data[campo] = data[campo]
 
         if not update_data:
             return None
 
-        result = collection.find_one_and_update(
+        producto_actualizado = collection.find_one_and_update(
             {'_id': producto_id},
             {'$set': update_data},
             return_document=True
         )
 
-        return result
+        return producto_actualizado
 
     @staticmethod
-    def eliminar_producto(db, producto_id):
+    def eliminar_producto(
+        db,
+        producto_id
+    ):
 
         collection = Producto.get_collection(db)
 
