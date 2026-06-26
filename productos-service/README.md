@@ -1,42 +1,27 @@
-#  Servicio de Productos API (Flask + MongoDB)
+# Servicio de Productos API (Flask + MongoDB)
 
-API REST para la gestión de productos usando Flask y MongoDB.
+## Descripción
+API REST para gestión de productos usando Flask y MongoDB.
 
 ---
 
-##  Instalación rápida
+##  Instalación
 
-### 1. Clonar o copiar el proyecto
+### 1. Clonar proyecto
 ```bash
-git clone <TU_REPO>
-cd <TU_PROYECTO>
+git clone <REPO>
+cd <PROYECTO>
 ```
 
-### 2. Crear entorno virtual
-```bash
-python -m venv venv
-```
 
-Activar:
-
-**Windows**
-```bash
-venv\Scripts\activate
-```
-
-**Linux/Mac**
-```bash
-source venv/bin/activate
-```
-
-### 3. Instalar dependencias
+### 2. Instalar dependencias
 ```bash
 pip install flask flask-cors pymongo python-dotenv
 ```
 
 ---
 
-##  Configurar .env
+## Configuración (.env)
 
 Crear archivo `.env`:
 
@@ -49,7 +34,9 @@ MONGODB_DB=productos_db
 
 ---
 
-## ▶Ejecutar proyecto
+##  Ejecución
+
+### Python
 
 ```bash
 python app.py
@@ -57,27 +44,68 @@ python app.py
 
 ---
 
-## URL base
-http://localhost:3001/api/productos
+## Endpoints
+
+Base:
+```
+/api/productos
+```
+
+- POST /registrar
+- GET /listar
+- GET /<producto_id>
+- PUT /<producto_id>
+- DELETE /<producto_id>
 
 ---
 
 ## Health check
+```
 GET /health
+```
 
 ---
 
-## Endpoints
-
-- POST /registrar
-- GET /listar
-- GET /<id>
-- PUT /<id>
-- DELETE /<id>
+## Obtener productos
+GET http://localhost:5001/api/productos/
 
 ---
 
-## Tecnologías
-- Flask
-- MongoDB
-- PyMongo
+## Crear producto
+POST http://localhost:5001/api/productos/
+Content-Type: application/json
+
+{
+    "nombre": "Laptop Lenovo",
+    "descripcion": "Core i7 16GB RAM",
+    "precio": 750000,
+    "stock": 10
+}
+
+---
+
+## Obtener por ID
+GET http://localhost:5001/api/productos/COLOQUE_ID
+
+---
+
+## Actualizar
+PUT http://localhost:5001/api/productos/COLOQUE_ID
+Content-Type: application/json
+
+{
+    "precio": 800000,
+    "stock": 5
+}
+
+---
+
+## Eliminar
+DELETE http://localhost:5001/api/productos/COLOQUE_ID
+
+---
+
+## Notas
+- Base de datos: MongoDB
+- Colección: productos
+- API usa Blueprint con prefijo /api/productos
